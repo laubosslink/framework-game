@@ -33,6 +33,7 @@ public class AffichageTexte implements Observer {
      * @param obj l'objet qui respecte l'inteface pour un affichage textuel
      */
     public AffichageTexte(String nom, Observable obj) {
+        this.nom = nom;
         this.obj = obj;
         this.obj.addObserver(this);
     }
