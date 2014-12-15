@@ -1,3 +1,4 @@
+package Materiel;
 
 public class Carte implements Materiel{
 	int numero;

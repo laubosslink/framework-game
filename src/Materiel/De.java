@@ -1,3 +1,4 @@
+package Materiel;
 
 public class De implements Materiel{
 	int nbFaces;

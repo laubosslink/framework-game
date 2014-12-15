@@ -1,3 +1,4 @@
+package Materiel;
 
 public class Argent implements Materiel{
 	String type;
