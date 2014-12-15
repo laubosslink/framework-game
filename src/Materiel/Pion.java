@@ -1,3 +1,4 @@
+package Materiel;
 
 public class Pion implements Materiel{
 	String couleur;
