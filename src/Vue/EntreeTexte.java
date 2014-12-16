@@ -15,9 +15,10 @@ public abstract class EntreeTexte {
         this.label = label;
     }
     
-    public String input()
+    public String input(String label_suffixe)
     {
-        System.out.println(label + ": ");
+        
+        System.out.println(label + " (" + label_suffixe + "): ");
         
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String input = "";
@@ -36,6 +37,11 @@ public abstract class EntreeTexte {
         }*/
         
         return input;
+    }
+    
+    public String input()
+    {
+        return this.input("");
     }
     
 }

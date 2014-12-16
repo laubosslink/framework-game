@@ -12,9 +12,10 @@ public abstract class TexteVue extends VueType {
     public abstract String toString();
 
     @Override
-    public void update(Observable o, Object o1) {
+    public void update(Observable o, Object o1) 
+    {
         System.out.println("----{" + super.nom + "}------");
-        System.out.println(this.obj.toString());
+        System.out.println(this.toString());
         System.out.println("--------------------");
     }
     

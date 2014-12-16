@@ -1,10 +1,12 @@
 package games.ttc.controleur;
 
+import Controleur.Action;
 import Controleur.PartieControleur;
 import Modele.JoueurModele;
 import Modele.PartieModele;
 import Vue.VueType;
 import games.ttc.modele.Joueur;
+import games.ttc.modele.Plateau;
 import games.ttc.vue.SaisieJoueur;
 
 
@@ -38,21 +40,29 @@ public class Partie extends PartieControleur {
     public void lancer() {
         
         /** @todo l'entree doit etre un singleton */
+        SaisieJoueur p1 = new SaisieJoueur("Poser pion J1");
+        SaisieJoueur p2 = new SaisieJoueur("Poser pion J2");
         
-        SaisieJoueur s1 = new SaisieJoueur("Nom joueur 1: ");
-        SaisieJoueur s2 = new SaisieJoueur("Nom joueur 2: ");
+        PartieModele pm = (PartieModele) super.m;
         
-        SaisieJoueur p1 = new SaisieJoueur("Poser pion J1: ");
-        SaisieJoueur p2 = new SaisieJoueur("Poser pion J2: ");
+        JoueurModele j1 = new Joueur("X", (Plateau) pm.getPlateau());
+        JoueurModele j2 = new Joueur("O", (Plateau) pm.getPlateau());
         
-        ((PartieModele) super.m).ajouterJoueur(new Joueur(s1.input()));
-        ((PartieModele) super.m).ajouterJoueur(new Joueur(s2.input()));
+        pm.ajouterJoueur(j1);
+        pm.ajouterJoueur(j2);
+        
+        // controlleur de chaque joueur
+        games.ttc.controleur.Joueur jc1 = new games.ttc.controleur.Joueur(j1, p1);
+        games.ttc.controleur.Joueur jc2 = new games.ttc.controleur.Joueur(j2, p2);
+        
+        this.ajouterAction(jc1);
+        this.ajouterAction(jc2);
         
         while(!estFinit()){
-            JoueurModele joueur_courrant = ((PartieModele)super.m).getJoueurCourrant();
-            
-            
-            ((PartieModele)super.m).prochainJoueur();
+            for(Action jc : this.l)
+            {
+                jc.execute();
+            }
         }
     }
 

@@ -3,7 +3,7 @@ package games.ttc.vue;
 import Modele.ModeleObservable;
 import Vue.TexteVue;
 
-public class Plateau extends TexteVue{
+public class Plateau extends TexteVue {
 
     public Plateau(String nom, ModeleObservable obj) {
         super(nom, obj);
