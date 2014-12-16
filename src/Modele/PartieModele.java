@@ -1,15 +1,60 @@
 package Modele;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class PartieModele extends  ModeleObservable{
-    private boolean estFinit;
+    protected PlateauModele p;
+  
+    protected JoueurModele joueurCourrant;  
+    protected List<JoueurModele> l;
     
-    public PartieModele()
+    public PartieModele(PlateauModele p)
     {
-        this.estFinit = false;
+        this.l = new ArrayList<>();
+        this.p = p;
+        this.joueurCourrant = null;
     }
     
-    public boolean getEstFinit()
+    public void ajouterJoueur(JoueurModele jm)
     {
-        return this.estFinit;
+        this.l.add(jm);
+    }
+    
+    public List<JoueurModele> getJoueurs()
+    {
+        return this.l;
+    }
+    
+    public PlateauModele getPlateau()
+    {
+        return this.p;
+    }
+    
+    public JoueurModele getJoueurCourrant()
+    {
+        return joueurCourrant;
+    }
+    
+    public void prochainJoueur()
+    {
+        if(this.l.size() == 0)
+            return;
+        
+        if(this.joueurCourrant == null)
+            this.joueurCourrant = this.l.get(0);
+        
+        int i=0;
+        
+        for(JoueurModele jm : this.l)
+        {
+            if(joueurCourrant == jm)
+                if(i == this.l.size()-1)
+                    joueurCourrant = this.l.get(0);
+                else
+                    joueurCourrant = this.l.get(i+1);
+            
+            i++;
+        }
     }
 }
