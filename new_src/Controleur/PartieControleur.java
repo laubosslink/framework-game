@@ -8,7 +8,7 @@ import Vue.VueType;
 /**
  * Class PartieControleur
  */
-public class PartieControleur extends ControleurTemplate {
+abstract public class PartieControleur extends ControleurTemplate {
 
   //
   // Fields

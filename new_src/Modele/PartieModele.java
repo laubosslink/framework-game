@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * Class PartieModele
  */
-public class PartieModele {
+abstract public class PartieModele {
 
   //
   // Fields

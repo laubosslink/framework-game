@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * Class Affichage
  */
-public class Affichage {
+abstract public class Affichage {
 
   //
   // Fields
