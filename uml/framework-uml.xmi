@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI verified="false" xmi.version="1.2" timestamp="2014-12-17T12:13:03" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
+<XMI verified="false" xmi.version="1.2" timestamp="2014-12-19T15:01:36" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
@@ -35,6 +35,8 @@
         <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="pmUukk3m7Ght" name="undef"/>
         <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" elementReference="9zTOB9l7WqB9" isRoot="false" xmi.id="xUyRWVqwZ7w9" name="list&lt;Modele:JoueurModele>"/>
         <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" elementReference="9zTOB9l7WqB9" isRoot="false" xmi.id="Rrq2JCVKGNYn" name="list&lt;Controleur::Action>"/>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="jXOKoPguxwY3" name="boolean"/>
+        <UML:DataType stereotype="datatype" visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uEOmkZ2nygDX" name="byte"/>
        </UML:Namespace.ownedElement>
       </UML:Package>
       <UML:Package visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="WX1vEg4X2xJm" name="Modele">
@@ -367,7 +369,6 @@
         <UML:AssociationEnd changeability="changeable" visibility="public" isNavigable="true" isSpecification="false" xmi.id="SvEiVbXliuGK" type="BIVLv2UUquJk" name="" aggregation="none"/>
        </UML:Association.connection>
       </UML:Association>
-      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="ZOPdQuVmTgkD" name="List"/>
       <UML:Dependency visibility="public" isSpecification="false" namespace="Logical View" supplier="BIVLv2UUquJk" xmi.id="85MnptBCWZ72" client="boL2OoHonazG" name=""/>
       <UML:Association visibility="public" isSpecification="false" namespace="Logical View" xmi.id="Qm7JkIP16Ll7" name="">
        <UML:Association.connection>
@@ -397,7 +398,6 @@
         <UML:AssociationEnd changeability="changeable" visibility="public" isNavigable="true" isSpecification="false" xmi.id="TGESjQMoiwgi" type="JIj7yL2tIJ2S" name="" aggregation="none"/>
        </UML:Association.connection>
       </UML:Association>
-      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="5HCFtDvwyxkC" name="String"/>
       <UML:Dependency visibility="public" isSpecification="false" namespace="Logical View" supplier="JIj7yL2tIJ2S" xmi.id="NJXSapPusoXM" client="fMmUNR8zwD8M" name=""/>
       <UML:Dependency visibility="public" isSpecification="false" namespace="Logical View" supplier="JIj7yL2tIJ2S" xmi.id="ruRN1zakWWpT" client="fMmUNR8zwD8M" name=""/>
       <UML:Association visibility="public" isSpecification="false" namespace="Logical View" xmi.id="PPx7clXUPBa9" name="">
@@ -439,9 +439,6 @@
        </UML:Association.connection>
       </UML:Association>
       <UML:Abstraction visibility="public" isSpecification="false" namespace="Logical View" supplier="k3lAXTlzvDYw" xmi.id="7WhHMg4OnnaN" client="XdGKgWvM0Un9" name=""/>
-      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Qb9AZiOxKbDF" name="ModeleObservable"/>
-      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="gBGh8gOHzlQG" name="VueType"/>
-      <UML:Class visibility="public" isSpecification="false" namespace="Logical View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="9zTOB9l7WqB9" name="list"/>
       <UML:Generalization discriminator="" visibility="public" isSpecification="false" namespace="Logical View" child="TeKucb4ypvD8" xmi.id="dnom1xqUbAOE" parent="XdGKgWvM0Un9" name=""/>
       <UML:Dependency visibility="public" isSpecification="false" namespace="Logical View" supplier="k3lAXTlzvDYw" xmi.id="ZxxZAtYIe10Z" client="TeKucb4ypvD8" name=""/>
       <UML:Association visibility="public" isSpecification="false" namespace="Logical View" xmi.id="3tcF7VhO4AxC" name="">
@@ -723,7 +720,7 @@
   </UML:Model>
  </XMI.content>
  <XMI.extensions xmi.extender="umbrello">
-  <docsettings viewid="n4kji5FGl385" uniqueid="e7jrEu5tqTlr" documentation=""/>
+  <docsettings viewid="n4kji5FGl385" uniqueid="uEOmkZ2nygDX" documentation=""/>
   <listview>
    <listitem open="1" type="800" id="Views">
     <listitem open="1" type="821" id="Component View"/>
@@ -731,7 +728,7 @@
     <listitem open="1" type="836" id="Entity Relationship Model"/>
     <listitem open="1" type="801" id="Logical View">
      <listitem open="0" type="807" id="n4kji5FGl385" label="class diagram"/>
-     <listitem open="1" type="818" id="FABkiDduthPu">
+     <listitem open="0" type="818" id="FABkiDduthPu">
       <listitem open="0" type="817" id="k3lAXTlzvDYw">
        <listitem open="0" type="815" id="EY6oEXQztr0X"/>
        <listitem open="0" type="815" id="M7CNCxXWkRuK"/>
@@ -744,7 +741,7 @@
        <listitem open="0" type="814" id="4AQ2Uhq9ye0m"/>
       </listitem>
       <listitem open="0" type="813" id="i8Ov0i97zPFi"/>
-      <listitem open="1" type="813" id="TeKucb4ypvD8">
+      <listitem open="0" type="813" id="TeKucb4ypvD8">
        <listitem open="0" type="815" id="mNhpKIs0bhOm"/>
        <listitem open="0" type="815" id="TMt44GoVf3GD"/>
        <listitem open="0" type="815" id="pKvqZxwfOyGt"/>
@@ -756,6 +753,8 @@
      </listitem>
      <listitem open="0" type="830" id="Datatypes">
       <listitem open="1" type="829" id="WLJ45HU9QFOu"/>
+      <listitem open="1" type="829" id="jXOKoPguxwY3"/>
+      <listitem open="1" type="829" id="uEOmkZ2nygDX"/>
       <listitem open="1" type="829" id="fmBfZGPGyUVC"/>
       <listitem open="1" type="829" id="Zqaj452L97bb"/>
       <listitem open="1" type="829" id="xAgZBJJMyqcO"/>
@@ -775,9 +774,7 @@
      </listitem>
      <listitem open="1" type="813" id="DuwGcdxdcpt1"/>
      <listitem open="1" type="817" id="Iqn3kX9CKzsF"/>
-     <listitem open="1" type="813" id="9zTOB9l7WqB9"/>
-     <listitem open="1" type="813" id="ZOPdQuVmTgkD"/>
-     <listitem open="1" type="818" id="WX1vEg4X2xJm">
+     <listitem open="0" type="818" id="WX1vEg4X2xJm">
       <listitem open="0" type="813" id="OE8nLsFxMRJE">
        <listitem open="0" type="815" id="bMc0kWI8iQv3"/>
        <listitem open="0" type="815" id="I9ydaGprNGUc"/>
@@ -822,9 +819,7 @@
       </listitem>
       <listitem open="0" type="817" id="Jn9LgRvFB1CM"/>
      </listitem>
-     <listitem open="1" type="813" id="Qb9AZiOxKbDF"/>
-     <listitem open="1" type="813" id="5HCFtDvwyxkC"/>
-     <listitem open="1" type="818" id="XBbnQowbWco9">
+     <listitem open="0" type="818" id="XBbnQowbWco9">
       <listitem open="1" type="813" id="fMmUNR8zwD8M">
        <listitem open="0" type="815" id="4PhXfjuJuA02"/>
        <listitem open="0" type="815" id="Nft3MVreQMs8"/>
@@ -854,13 +849,12 @@
        <listitem open="0" type="815" id="lDWw9gx1pDBz"/>
       </listitem>
      </listitem>
-     <listitem open="1" type="813" id="gBGh8gOHzlQG"/>
     </listitem>
     <listitem open="1" type="802" id="Use Case View"/>
    </listitem>
   </listview>
   <codegeneration>
-   <codegenerator language="C++">
+   <codegenerator language="Java">
     <sourcecode value="this.nom = nom;&#xa; this.m = new ArrayList&lt;>();&#xa; this.p = p;" id="609RL3tN0wPW"/>
     <sourcecode value="this.nom=nom;&#xa;this.m=m;" id="8YG9UedOVwsD"/>
     <sourcecode value="this.add(m);" id="BudeqVrbBJPn"/>
