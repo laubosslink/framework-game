@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI verified="false" xmi.version="1.2" timestamp="2014-12-17T12:05:01" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
+<XMI verified="false" xmi.version="1.2" timestamp="2014-12-17T12:13:03" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
@@ -465,7 +465,7 @@
      </UML:Namespace.ownedElement>
      <XMI.extension xmi.extender="umbrello">
       <diagrams>
-       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="class diagram" font="Ubuntu,9,-1,5,50,0,0,0,0,0" canvasheight="1021,716613769531" canvaswidth="2013,063842773438" localid="-1" snapcsgrid="0" showgrid="1" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" usefillcolor="1" fillcolor="#ffff00" zoom="78" xmi.id="n4kji5FGl385" documentation="" showscope="1" snapgrid="0" showatts="1" type="1">
+       <diagram showopsig="1" linecolor="#ff0000" snapx="25" showattribassocs="1" snapy="25" linewidth="0" showattsig="1" textcolor="#000000" isopen="1" showpackage="1" showpubliconly="0" showstereotype="1" name="class diagram" font="Ubuntu,9,-1,5,50,0,0,0,0,0" canvasheight="950,1926422119141" canvaswidth="2013,063842773438" localid="-1" snapcsgrid="0" showgrid="1" showops="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" usefillcolor="1" fillcolor="#ffff00" zoom="78" xmi.id="n4kji5FGl385" documentation="" showscope="1" snapgrid="0" showatts="1" type="1">
         <widgets>
          <packagewidget width="100" showstereotype="1" x="-746" usesdiagramusefillcolor="0" y="-815" usesdiagramfillcolor="0" isinstance="0" localid="Kbasa2g1B410" fillcolor="#ffff00" height="38" linecolor="#ff0000" xmi.id="WX1vEg4X2xJm" textcolor="#000000" usefillcolor="1" linewidth="0" font="Ubuntu,9,-1,5,75,1,0,0,0,0"/>
          <packagewidget width="100" showstereotype="1" x="174,9487762451172" usesdiagramusefillcolor="0" y="-702,7894897460938" usesdiagramfillcolor="0" isinstance="0" localid="ie1tzaRpARVA" fillcolor="#ffff00" height="38" linecolor="#ff0000" xmi.id="FABkiDduthPu" textcolor="#000000" usefillcolor="1" linewidth="0" font="Ubuntu,9,-1,5,75,1,0,0,0,0"/>
