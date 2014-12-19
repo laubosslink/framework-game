@@ -59,6 +59,7 @@ public class CommandeManager {
    */
   public boolean peutRecommencer()
   {
+	return false;
   }
 
 

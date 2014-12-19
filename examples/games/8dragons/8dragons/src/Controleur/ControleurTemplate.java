@@ -22,6 +22,12 @@ abstract public class ControleurTemplate implements Action {
   //
   public ControleurTemplate () { };
   
+  public ControleurTemplate(ModeleObservable m, VueType v) {
+	super();
+	this.m = m;
+	this.v = v;
+}
+  
   //
   // Methods
   //
@@ -39,7 +45,9 @@ abstract public class ControleurTemplate implements Action {
     m = newVar;
   }
 
-  /**
+
+
+/**
    * Get the value of m
    * @return the value of m
    */

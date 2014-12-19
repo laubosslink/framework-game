@@ -14,9 +14,10 @@ abstract public class PartieControleur extends ControleurTemplate {
   // Fields
   //
 
-  private list<Controleur::Action> l;
-  
-  //
+  private List<Controleur::Action> l;
+
+
+//
   // Constructors
   //
   public PartieControleur () { };
@@ -34,7 +35,7 @@ abstract public class PartieControleur extends ControleurTemplate {
    * Set the value of l
    * @param newVar the new value of l
    */
-  private void setL (list<Controleur::Action> newVar) {
+  private void setL (List<Controleur::Action> newVar) {
     l = newVar;
   }
 
@@ -54,7 +55,7 @@ abstract public class PartieControleur extends ControleurTemplate {
    * @param        m
    * @param        v
    */
-  public void PartieControleur(Modele.PartieModele m, Vue.VueType v)
+  public PartieControleur(Modele.PartieModele m, Vue.VueType v)
   {
     super(m, v);
     this.l = new ArrayList<>();
