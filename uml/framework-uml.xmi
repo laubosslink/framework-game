@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI verified="false" xmi.version="1.2" timestamp="2014-12-19T15:20:04" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
+<XMI verified="false" xmi.version="1.2" timestamp="2014-12-19T15:36:31" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
@@ -146,11 +146,6 @@
           <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="7lJfy4Kv7E3v" name="getEstFini">
            <UML:BehavioralFeature.parameter>
             <UML:Parameter kind="return" xmi.id="PlyLRFGYyXBx" type="WLJ45HU9QFOu"/>
-           </UML:BehavioralFeature.parameter>
-          </UML:Operation>
-          <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="D7zESp9ZzSRP" name="getModeleJoueur">
-           <UML:BehavioralFeature.parameter>
-            <UML:Parameter kind="return" xmi.id="ZWqhkrawyaAO" type="xUyRWVqwZ7w9"/>
            </UML:BehavioralFeature.parameter>
           </UML:Operation>
          </UML:Classifier.feature>
@@ -804,7 +799,6 @@
        <listitem open="0" type="815" id="7lJfy4Kv7E3v"/>
        <listitem open="0" type="815" id="o3BOsry1bBpR"/>
        <listitem open="0" type="815" id="9kDosk752EHS"/>
-       <listitem open="0" type="815" id="D7zESp9ZzSRP"/>
        <listitem open="0" type="815" id="VfBgLgaU6AXS"/>
        <listitem open="0" type="814" id="wP65e7JpW4ZP"/>
        <listitem open="0" type="814" id="Q4J1aTTzOJzl"/>
