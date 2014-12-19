@@ -8,7 +8,7 @@ import modele.PlateauModele;
 public class Plateau extends PlateauModele{
 	
 	public Plateau(){
-		this.
+		//this.
 	}
 
 }
