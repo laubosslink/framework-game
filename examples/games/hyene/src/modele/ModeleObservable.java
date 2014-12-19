@@ -1,5 +1,7 @@
 package modele;
 
-public abstract class ModeleObservable {
+import java.util.*;
+
+public abstract class ModeleObservable extends Observable {
 
 }

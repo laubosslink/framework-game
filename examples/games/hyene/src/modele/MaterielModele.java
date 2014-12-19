@@ -1,5 +1,7 @@
 package modele;
 
-public abstract class MaterielModele {
+public abstract class MaterielModele extends ModeleObservable{
+	
+	
 
 }
