@@ -17,5 +17,12 @@ public class Plateau extends PlateauModele{
 		
 		notifyObservers();		
 	}
+	
+	public void displayPlateau(){
+		int n = this.plateau.length;
+		//for(int i=0 ; i<n; i++)
+			
+			
+	}
 
 }
