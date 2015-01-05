@@ -1,7 +1,6 @@
 package Modele;
 
-import java.util.*;
-import java.util.Observable.java_util_Observable;
+
 
 
 /**

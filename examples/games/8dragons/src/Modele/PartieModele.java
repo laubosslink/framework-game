@@ -15,7 +15,7 @@ abstract public class PartieModele {
   private boolean estFinit;
   private Modele.PlateauModele p;
   private Modele.JoueurModele joueurCourrant = null;
-  private list<Modele:JoueurModele> l;
+  private List<JoueurModele> l;
   
   //
   // Constructors
@@ -83,7 +83,7 @@ abstract public class PartieModele {
    * Set the value of l
    * @param newVar the new value of l
    */
-  private void setL (list<Modele:JoueurModele> newVar) {
+  private void setL (List<JoueurModele> newVar) {
     l = newVar;
   }
 
@@ -91,7 +91,7 @@ abstract public class PartieModele {
    * Get the value of l
    * @return the value of l
    */
-  private list<Modele:JoueurModele> getL () {
+  private List<JoueurModele> getL () {
     return l;
   }
 
@@ -102,7 +102,7 @@ abstract public class PartieModele {
   /**
    * @param        p
    */
-  public void PartieModele(Modele.PlateauModele p)
+  public void PartieModele(PlateauModele p)
   {
     this.l = new ArrayList<>();
     this.p = p;
@@ -122,7 +122,7 @@ abstract public class PartieModele {
   /**
    * @return       list<Modele:JoueurModele>
    */
-  public list<Modele:JoueurModele> getJoueurs()
+  public List<JoueurModele> getJoueurs()
   {
     return this.l;
   }
@@ -141,7 +141,7 @@ abstract public class PartieModele {
   /**
    * @return       Modele.JoueurModele
    */
-  public Modele.JoueurModele getJoueurCourrant()
+  public Modele.JoueurModele getJoueurCourrant1()
   {
     return joueurCourrant;
   }
@@ -170,22 +170,22 @@ abstract public class PartieModele {
                 i++;
             }
         }
-  }
+  
 
 
   /**
    * @return       boolean
    */
-  public boolean getEstFini()
-  {
-  }
+  public abstract boolean getEstFini();
 
 
   /**
-   * @return       list<Modele:JoueurModele>
+   * @return 
+ * @return       list<Modele:JoueurModele>
    */
-  public list<Modele:JoueurModele> getModeleJoueur()
+  public List<JoueurModele>  getModeleJoueur()
   {
+	return l;
   }
 
 

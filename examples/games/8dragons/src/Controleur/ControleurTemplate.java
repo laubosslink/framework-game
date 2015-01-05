@@ -82,6 +82,7 @@ abstract public class ControleurTemplate implements Action {
    */
   public Modele.ModeleObservable getModeleObservable()
   {
+	return m;
   }
 
 
@@ -90,6 +91,7 @@ abstract public class ControleurTemplate implements Action {
    */
   public Vue.VueType getVueType()
   {
+	return v;
   }
 
 
@@ -105,6 +107,7 @@ abstract public class ControleurTemplate implements Action {
    */
   public boolean estValide()
   {
+	return false;
   }
 
 

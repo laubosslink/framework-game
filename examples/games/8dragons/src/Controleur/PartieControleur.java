@@ -14,7 +14,7 @@ abstract public class PartieControleur extends ControleurTemplate {
   // Fields
   //
 
-  private list<Controleur::Action> l;
+  private ArrayList<Action> l;
   
   //
   // Constructors
@@ -34,7 +34,7 @@ abstract public class PartieControleur extends ControleurTemplate {
    * Set the value of l
    * @param newVar the new value of l
    */
-  private void setL (list<Controleur::Action> newVar) {
+  private void setL (ArrayList<Action> newVar) {
     l = newVar;
   }
 

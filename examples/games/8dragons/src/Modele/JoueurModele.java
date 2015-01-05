@@ -1,19 +1,19 @@
 package Modele;
 
 import java.util.*;
-import java.util.Observable.java_util_Observable;
+import java.util.Observable;
 
 
 /**
  * Class JoueurModele
  */
-abstract public class JoueurModele extends java_util_Observable, ModeleObservable {
+abstract public class JoueurModele extends ModeleObservable {
 
   //
   // Fields
   //
 
-  private List<Modele::MaterielModele> m;
+  private List<MaterielModele> m;
   private String nom;
   private Modele.PlateauModele p;
   
@@ -59,7 +59,7 @@ abstract public class JoueurModele extends java_util_Observable, ModeleObservabl
    * Get the value of nom
    * @return the value of nom
    */
-  private String getNom () {
+  private String getNom1 () {
     return nom;
   }
 
