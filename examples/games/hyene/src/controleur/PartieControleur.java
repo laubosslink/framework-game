@@ -18,4 +18,16 @@ public abstract class PartieControleur extends ControleurTemplate{
 		actionsList.add(a);		
 	}
 	
+	public void setActionsList(List<Action> al){
+		this.actionsList = al;
+	}
+	
+	public List<Action> getActionsList(){
+		return this.actionsList;
+	}
+	
+	public abstract void lancer();
+
+	public abstract void estFinit();
+	
 }

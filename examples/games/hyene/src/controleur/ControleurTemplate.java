@@ -2,10 +2,14 @@ package controleur;
 import modele.*;
 import vue.*;
 
-public abstract class ControleurTemplate {
+public abstract class ControleurTemplate implements Action{
 	
 	private modele.ModeleObservable m;
 	private vue.VueType vType;
+	
+	public ControleurTemplate(){
+		
+	}
 	
 	public ControleurTemplate(ModeleObservable mmo , VueType vt){
 		this.m = mmo;
@@ -18,6 +22,16 @@ public abstract class ControleurTemplate {
 	
 	public VueType getVueType(){
 		return vType;
+	}
+	
+	
+	public void execute(){
+	}
+
+	public boolean estValide(){
+		boolean r = false;
+		
+		return r;
 	}
 	
 }
