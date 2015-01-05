@@ -547,3 +547,13 @@ java.io.IOException: Stream closed
 	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:602)
 	at org.eclipse.help.internal.search.federated.IndexerJob.run(IndexerJob.java:31)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-01-05 18:01:02.752 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-01-05 18:01:08.752
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
