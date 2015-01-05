@@ -7,7 +7,7 @@ import java.util.Observable.java_util_Observable;
 /**
  * Class MaterielModele
  */
-abstract public class MaterielModele extends java_util_Observable, ModeleObservable {
+abstract public class MaterielModele extends  ModeleObservable {
 
   //
   // Fields

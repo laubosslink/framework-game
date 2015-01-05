@@ -1,12 +1,14 @@
 package Modele;
 
-public abstract class CarteEffetModele implements CarteModele {
+public class CarteEffetModele extends CarteModele {
 boolean piege;
-public CarteEffetModele(boolean piege, boolean gain, String nom) {
-	super();
+boolean gain;
+Effet e;
+public CarteEffetModele(boolean piege, Effet e) {
+	super("effet");
 	this.piege = piege;
-	this.gain = gain;
-	this.nom = nom;
+	this.gain = !gain;
+	this.e = e;
 }
 public boolean isPiege() {
 	return piege;
@@ -14,9 +16,8 @@ public boolean isPiege() {
 public boolean isGain() {
 	return gain;
 }
-public String getNom() {
-	return nom;
+public Effet getNom() {
+	return e;
 }
-boolean gain;
-String nom;
+
 }

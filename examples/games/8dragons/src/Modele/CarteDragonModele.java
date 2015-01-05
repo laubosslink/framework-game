@@ -1,17 +1,17 @@
 package Modele;
 
-public abstract class CarteDragonModele extends CarteModele {
+public class CarteDragonModele extends CarteModele {
 Membre m;
-String couleur;
+Couleur c;
 public Membre getM() {
 	return m;
 }
-public String getCouleur() {
-	return couleur;
+public Couleur getCouleur() {
+	return c;
 }
-public CarteDragonModele(Membre m, String couleur) {
-	super();
+public CarteDragonModele(Membre m, Couleur c) {
+	super("dragon");
 	this.m = m;
-	this.couleur = couleur;
+	this.c = c;
 }
 }

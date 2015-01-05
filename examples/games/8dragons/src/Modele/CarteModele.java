@@ -1,13 +1,13 @@
 package Modele;
 
 public abstract class CarteModele extends MaterielModele {
-	string type;
+	String type;
 
-	public string getType() {
+	public String getType() {
 		return type;
 	}
 
-	public CarteModele(string type) {
+	public CarteModele(String type) {
 		super();
 		this.type = type;
 	}
