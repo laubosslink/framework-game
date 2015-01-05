@@ -4,14 +4,97 @@ import java.util.*;
 
 public class Cartes extends MaterielModele {
 ArrayList<CarteModele> tas;
+boolean version_longue;
 
-public Cartes(){
+public Cartes(boolean longue){
 	//Création des cartes
+	if(longue)
+	{
 	ajoutdragons();
-	ajoutseffets();
+	ajouteffets();
+	}
+	else
+	{
+		ajoutdragons_court();
+		ajouteffets_court();		
+		
+	}
 }
 
-private void ajoutseffets() {
+private void ajoutdragons_court() {
+	CarteModele tmp;
+	for(int i=0;i<3;i++)//rouge
+	{
+	tmp=new CarteDragonModele(Membre.griffe,Couleur.rouge);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.patte_arriere,Couleur.rouge);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.queue,Couleur.rouge);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.tete,Couleur.rouge);
+	tas.add(tmp);
+	}
+	for(int i=0;i<2;i++)//vert
+	{
+	tmp=new CarteDragonModele(Membre.griffe,Couleur.vert);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.patte_arriere,Couleur.vert);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.queue,Couleur.vert);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.tete,Couleur.vert);
+	tas.add(tmp);
+	}
+	
+	//multicolore
+	tmp=new CarteDragonModele(Membre.griffe,Couleur.multicolore);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.patte_arriere,Couleur.multicolore);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.queue,Couleur.multicolore);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.tete,Couleur.multicolore);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.tete,Couleur.multicolore);//Pour la carte bonus
+	tas.add(tmp);
+	
+	//argent
+	tmp=new CarteDragonModele(Membre.griffe,Couleur.argent);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.patte_arriere,Couleur.argent);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.queue,Couleur.argent);
+	tas.add(tmp);
+	tmp=new CarteDragonModele(Membre.tete,Couleur.argent);
+	tas.add(tmp);
+	
+}
+
+private void ajouteffets_court() {
+CarteModele tmp;
+	
+	for(int i=0;i<3;i++)
+	{
+		tmp= new CarteEffetModele(false, Effet.diamant);
+		tas.add(tmp);
+	}
+	
+	tmp = new CarteEffetModele(true, Effet.boule_de_feu);
+	tas.add(tmp);
+	
+	
+	tmp = new CarteEffetModele(true, Effet.deux_boules_de_feu);
+	tas.add(tmp);
+	
+	tmp = new CarteEffetModele(true, Effet.identique);
+	tas.add(tmp);
+	
+	tmp = new CarteEffetModele(false, Effet.deux_diamant);
+	tas.add(tmp);
+	
+}
+
+private void ajouteffets() {
 	CarteModele tmp;
 	
 	for(int i=0;i<4;i++)
@@ -32,7 +115,7 @@ private void ajoutseffets() {
 	tmp = new CarteEffetModele(true, Effet.identique);
 	tas.add(tmp);
 	
-	tmp = new CarteEffetModele(true, Effet.deux_diamant);
+	tmp = new CarteEffetModele(false, Effet.deux_diamant);
 	tas.add(tmp);
 	
 	
