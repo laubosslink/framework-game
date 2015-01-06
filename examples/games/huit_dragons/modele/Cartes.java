@@ -174,14 +174,10 @@ public class Cartes extends MaterielModele {
         tas.add(tmp);
     }
 
-    CarteModele tirer_carte() throws Exception {
-        if (!tas.isEmpty()) {
-            int i = (int) (Math.random() * (tas.size() - 1));
-            CarteModele tmp = tas.get(i);
-            tas.remove(i);
-            return tmp;
-        } else {
-            throw new Exception("Tas vide");
-        }
+    CarteModele tirer_carte() {
+        int i = (int) (Math.random() * (tas.size() - 1));
+        CarteModele tmp = tas.get(i);
+        tas.remove(i);
+        return tmp;
     }
 }

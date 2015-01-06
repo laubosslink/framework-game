@@ -21,7 +21,7 @@ public class CarteEffetModele extends CarteModele {
         return gain;
     }
 
-    public Effet getNom() {
+    public Effet getEffet() {
         return e;
     }
 
