@@ -4,30 +4,46 @@ import Controleur.Action;
 import Modele.JoueurModele;
 import Vue.EntreeTexte;
 import games.ttc.modele.Plateau;
-import games.ttc.modele.Rond;
-import games.ttc.vue.SaisieJoueur;
 
 public class Croix extends Controleur.ControleurTemplate implements Action {
 
-    SaisieJoueur s;
+    private EntreeTexte s;
+    private Plateau plateau;
     
-    public Croix(JoueurModele m, SaisieJoueur s) {
+    private JoueurModele joueur_modele;
+    
+    private int ligne, colonne;
+            
+    public Croix(JoueurModele m, EntreeTexte s) {
         super(m);
         this.s = s;
+        
+        this.joueur_modele = m;
+        this.plateau = (Plateau) this.joueur_modele.getPlateau();
     }
 
     @Override
-    public void execute() {
-        int l = Integer.valueOf(((EntreeTexte)this.s).input("ligne"));
-        int c = Integer.valueOf(((EntreeTexte)this.s).input("colonne"));
-        
-        ((Plateau)((JoueurModele) this.m).getPlateau()).poserSymbole(new games.ttc.modele.Croix(), l, c);
+    public void execute() 
+    {
+        games.ttc.modele.Croix croix = new games.ttc.modele.Croix();
+        this.plateau.poserSymbole(croix, ligne, colonne);
     }
 
     @Override
     public boolean estValide() {
-        /** @todo */
+        ligne = Integer.valueOf(this.s.input("ligne"));
+        colonne = Integer.valueOf(this.s.input("colonne"));
+                
+        if(ligne < 0 || ligne >= this.plateau.getPlateau().length)
+        {
+            return false;
+        }
+        
+        if(colonne < 0 || colonne >= this.plateau.getPlateau()[0].length)
+        {
+            return false;
+        }
+        
         return true;
     }
-    
 }

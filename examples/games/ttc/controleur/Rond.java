@@ -4,29 +4,45 @@ import Controleur.Action;
 import Modele.JoueurModele;
 import Vue.EntreeTexte;
 import games.ttc.modele.Plateau;
-import games.ttc.vue.SaisieJoueur;
 
 public class Rond extends Controleur.ControleurTemplate implements Action {
 
-    SaisieJoueur s;
+    private EntreeTexte s;
+    private Plateau plateau;
+    private JoueurModele joueur_modele;
     
-    public Rond(JoueurModele m, SaisieJoueur s) {
+    private int ligne, colonne;
+            
+    public Rond(JoueurModele m, EntreeTexte s) {
         super(m);
         this.s = s;
+        
+        this.joueur_modele = m;
+        this.plateau = (Plateau) this.joueur_modele.getPlateau();
     }
 
     @Override
-    public void execute() {
-        int l = Integer.valueOf(((EntreeTexte)this.s).input("ligne"));
-        int c = Integer.valueOf(((EntreeTexte)this.s).input("colonne"));
-        
-        ((Plateau)((JoueurModele) this.m).getPlateau()).poserSymbole(new games.ttc.modele.Rond(), l, c);
+    public void execute() 
+    {
+        games.ttc.modele.Rond rond = new games.ttc.modele.Rond();
+        this.plateau.poserSymbole(rond, ligne, colonne);
     }
 
     @Override
     public boolean estValide() {
-        /** @todo */
+        ligne = Integer.valueOf(this.s.input("ligne"));
+        colonne = Integer.valueOf(this.s.input("colonne"));
+                
+        if(ligne < 0 || ligne >= this.plateau.getPlateau().length)
+        {
+            return false;
+        }
+        
+        if(colonne < 0 || colonne >= this.plateau.getPlateau()[0].length)
+        {
+            return false;
+        }
+        
         return true;
     }
-    
 }
