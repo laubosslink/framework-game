@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Plateau extends PlateauModele {
+public class Plateau extends PlateauModele implements Observer {
 
     protected CarteModele[][] cm;
     protected Jeton[] jetons;
@@ -30,6 +30,7 @@ public class Plateau extends PlateauModele {
                 for (int j=0; j<6; j++) {
                     try {
                         this.cm[i][j] = cartes.tirer_carte();
+                        this.cm[i][j].addObserver(this);
                     } catch (Exception ex) {
                         Logger.getLogger(Plateau.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -48,6 +49,12 @@ public class Plateau extends PlateauModele {
                 }
             }
         }
+    }
+
+    @Override
+    public void update(Observable o, Object o1) {
+        this.setChanged();
+        this.notifyObservers();
     }
 
 }

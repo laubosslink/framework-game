@@ -1,7 +1,7 @@
 package games.huit_dragons.controleur;
 
 import Controleur.Action;
-import games.ttc.vue.SaisieJoueur;
+import games.huit_dragons.vue.SaisieJoueur;
 import games.huit_dragons.modele.CarteModele;
 import games.huit_dragons.modele.Plateau;
 

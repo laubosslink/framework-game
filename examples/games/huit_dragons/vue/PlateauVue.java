@@ -1,11 +1,10 @@
 package games.huit_dragons.vue;
 
-import Modele.ModeleObservable;
 import Modele.PlateauModele;
 import Vue.TexteVue;
-import Vue.VueType;
 import games.huit_dragons.modele.CarteDragonModele;
 import games.huit_dragons.modele.CarteModele;
+import games.huit_dragons.modele.Plateau;
 
 public class PlateauVue extends TexteVue {
 
@@ -15,7 +14,7 @@ public class PlateauVue extends TexteVue {
 
     @Override
     public String toString() {
-        PlateauModele pm = (PlateauModele) this.obj;
+        Plateau pm = (Plateau) this.obj;
 
         String output = "";
         CarteModele[][] cm = pm.getCartes();
@@ -23,54 +22,57 @@ public class PlateauVue extends TexteVue {
         
         for (int i = 0; i < cm.length; i++) 
         {
-            for (int j = 0; i < cm[i].length; j++) 
+            for (int j = 0; j < cm[i].length; j++) 
             {
                 cm_courrante = cm[i][j];
                 
                 if(!cm_courrante.estVisible())
                 {
                     output += "X";
-                    break;
-                }
-                
-                if(cm_courrante instanceof CarteDragonModele)
+                } else 
                 {
-                    switch(((CarteDragonModele) cm_courrante).getCouleur()){
-                        case argent:
-                            output += "\\033[30m";
-                            break;
-                        case multicolore:
-                            output += "";
-                            break;
-                        case or:
-                            output += "\\033[33m";
-                            break;
-                        case rouge:
-                            output += "\\033[31m";
-                            break;
-                        case vert:
-                            output += "";
-                            break;
-                       
+                    if(cm_courrante instanceof CarteDragonModele)
+                    {
+                        switch(((CarteDragonModele) cm_courrante).getCouleur()){
+                            case argent:
+                                output += "\u001B[30m";
+                                break;
+                            case multicolore:
+                                output += "\u001B[37m";
+                                break;
+                            case or:
+                                output += "\u001B[33m";
+                                break;
+                            case rouge:
+                                output += "\u001B[31m";
+                                break;
+                            case vert:
+                                output += "\u001B[32m";
+                                break;
+
+                        }
+                        
+                        switch(((CarteDragonModele) cm_courrante).getM()){
+                            case griffe:
+                                output += "G";
+                                break;
+                            case patte_arriere:
+                                output += "P";
+                                break;
+                            case queue:
+                                output += "Q";
+                                break;
+                            case tete:
+                                output += "T";
+                                break;
+                        }
+                        
+                        output += "\u001B[30m";
+                        
+                    } else //TODO les CarteEffet
+                    {
+                        output += "X";
                     }
-                    
-                    switch(((CarteDragonModele) cm_courrante).getM()){
-                        case griffe:
-                            output += "G";
-                            break;
-                        case patte_arriere:
-                            output += "P";
-                            break;
-                        case queue:
-                            output += "Q";
-                            break;
-                        case tete:
-                            output += "T";
-                            break;
-                    }
-                } else //TODO les CarteEffet
-                {
-                    output += "\\033[0mX";
                 }
             }
             

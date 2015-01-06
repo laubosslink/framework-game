@@ -9,6 +9,8 @@ public class Cartes extends MaterielModele {
     boolean version_longue;
 
     public Cartes(boolean longue) {
+        tas = new ArrayList<>();
+        
         //Création des cartes
         if (longue) {
             ajoutdragons();

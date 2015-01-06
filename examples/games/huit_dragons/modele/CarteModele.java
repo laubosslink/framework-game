@@ -13,10 +13,14 @@ public abstract class CarteModele extends MaterielModele {
     
     public void devientVisible(){
         this.visible = true;
+        this.setChanged();
+        this.notifyObservers();
     }
     
     public void devientNonVisible(){
         this.visible = false;
+        this.setChanged();
+        this.notifyObservers();
     }
     
     public boolean estVisible(){
