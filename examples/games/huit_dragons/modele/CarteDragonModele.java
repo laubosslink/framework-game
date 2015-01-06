@@ -2,18 +2,21 @@ package games.huit_dragons.modele;
 
 public class CarteDragonModele extends CarteModele {
 
-    Membre m;
-    Couleur c;
+    private Membre m;
+    private Couleur c;
 
-    public Membre getM() {
+    public Membre getM() 
+    {
         return m;
     }
 
-    public Couleur getCouleur() {
+    public Couleur getCouleur() 
+    {
         return c;
     }
 
-    public CarteDragonModele(Membre m, Couleur c) {
+    public CarteDragonModele(Membre m, Couleur c) 
+    {
         super("dragon");
         this.m = m;
         this.c = c;
