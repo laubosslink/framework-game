@@ -3,6 +3,7 @@ package games.huit_dragons.vue;
 import Modele.PlateauModele;
 import Vue.TexteVue;
 import games.huit_dragons.modele.CarteDragonModele;
+import games.huit_dragons.modele.CarteEffetModele;
 import games.huit_dragons.modele.CarteModele;
 import games.huit_dragons.modele.Plateau;
 
@@ -26,10 +27,13 @@ public class PlateauVue extends TexteVue {
             {
                 cm_courrante = cm[i][j];
                 
-                if(!cm_courrante.estVisible())
+                if(cm_courrante == null)
+                {
+                    output += " ";
+                } else if(!cm_courrante.estVisible())
                 {
                     output += "X";
-                } else 
+                } else
                 {
                     if(cm_courrante instanceof CarteDragonModele)
                     {
@@ -69,8 +73,36 @@ public class PlateauVue extends TexteVue {
                         
                         output += "\u001B[30m";
                         
-                    } else //TODO les CarteEffet
+                    } else if(cm_courrante instanceof CarteEffetModele)
                     {
+                        // Couleur pour les cartes avec effet
+                        output += "\u001B[35m";
+                        
+                        switch(((CarteEffetModele) cm_courrante).getEffet())
+                        {
+                            case boule_de_feu:
+                                output += "B";
+                                break;
+                            case deux_boules_de_feu:
+                                output += "N";
+                                break;
+                            case deux_diamant:
+                                output += "F";
+                                break;
+                            case diamant:
+                                output += "D";
+                                break;
+                            case identique:
+                                output += "I";
+                                break;
+                            case tete_multicolore:
+                                output += "M";
+                                break;
+                                
+                        }
+                        
+                        output += "\u001B[30m";
+                    } else {
                         output += "X";
                     }
                 }
