@@ -14,7 +14,6 @@ public class CarteDragonModele extends CarteModele {
     }
 
     public CarteDragonModele(Membre m, Couleur c) {
-        super("dragon");
         this.m = m;
         this.c = c;
     }

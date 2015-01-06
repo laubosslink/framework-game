@@ -6,8 +6,8 @@ public class CarteEffetModele extends CarteModele {
     boolean gain;
     Effet e;
 
-    public CarteEffetModele(boolean piege, Effet e) {
-        super("effet");
+    public CarteEffetModele(boolean piege, Effet e) 
+    {
         this.piege = piege;
         this.gain = !gain;
         this.e = e;

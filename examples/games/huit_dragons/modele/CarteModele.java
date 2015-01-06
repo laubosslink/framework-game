@@ -4,14 +4,23 @@ import Modele.MaterielModele;
 
 public abstract class CarteModele extends MaterielModele {
 
-    String type;
+    private boolean visible;
 
-    public String getType() {
-        return type;
-    }
-
-    public CarteModele(String type) {
+    public CarteModele() {
         super();
-        this.type = type;
+        this.visible = false;
     }
+    
+    public void devientVisible(){
+        this.visible = true;
+    }
+    
+    public void devientNonVisible(){
+        this.visible = false;
+    }
+    
+    public boolean estVisible(){
+        return this.visible;
+    }
+            
 }

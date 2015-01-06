@@ -52,7 +52,7 @@ public class Partie extends PartieControleur {
         pm.ajouterJoueur(j1);
         pm.ajouterJoueur(j2);
         
-        // controlleur de chaque joueur
+        // controleur de chaque joueur
         games.ttc.controleur.Croix jc1 = new games.ttc.controleur.Croix(j1, p1);
         games.ttc.controleur.Rond jc2 = new games.ttc.controleur.Rond(j2, p2);
         

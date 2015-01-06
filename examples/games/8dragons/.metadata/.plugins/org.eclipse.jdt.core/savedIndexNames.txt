@@ -1,1 +1,0 @@
-INDEX VERSION 1.126+/home/eleves/promo16/info/derory/Documents/framework/examples/games/8dragons/.metadata/.plugins/org.eclipse.jdt.core

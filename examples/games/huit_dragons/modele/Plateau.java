@@ -7,9 +7,14 @@ import java.util.logging.Logger;
 
 public class Plateau extends PlateauModele {
 
-    Jeton[] jetons;
-    boolean version_longue;
-
+    protected CarteModele[][] cm;
+    protected Jeton[] jetons;
+    protected boolean version_longue;
+    
+    public CarteModele[][] getCartes(){
+        return this.cm;
+    }
+    
     public Plateau(boolean longue) {
         super();
         jetons = new Jeton[4];
@@ -19,24 +24,27 @@ public class Plateau extends PlateauModele {
 
         if (longue)//Version longue
         {
-            for (int i = 0; i < (7 * 6); i++) {
-                try {
-                    tmp = cartes.tirer_carte();
-
-                    liste.add(tmp);
-                } catch (Exception ex) {
-                    Logger.getLogger(Plateau.class.getName()).log(Level.SEVERE, null, ex);
+            this.cm = new CarteModele[7][6];
+            
+            for (int i = 0; i < 7; i++) {
+                for (int j=0; j<6; j++) {
+                    try {
+                        this.cm[i][j] = cartes.tirer_carte();
+                    } catch (Exception ex) {
+                        Logger.getLogger(Plateau.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             }
+            
         } else//Version courtes
         {
-            for (int i = 0; i < (6 * 6); i++) {
-                try {
-                    tmp = cartes.tirer_carte();
-
-                    liste.add(tmp);
-                } catch (Exception ex) {
-                    Logger.getLogger(Plateau.class.getName()).log(Level.SEVERE, null, ex);
+            for (int i = 0; i < 6; i++) {
+                for (int j=0; j<6; j++) {
+                    try {
+                        this.cm[i][j] = cartes.tirer_carte();
+                    } catch (Exception ex) {
+                        Logger.getLogger(Plateau.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             }
         }
