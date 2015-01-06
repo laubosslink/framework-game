@@ -44,6 +44,7 @@ public class Partie extends PartieControleur {
         SaisieJoueur p2 = new SaisieJoueur("Poser pion J2");
         
         PartieModele pm = (PartieModele) super.m;
+
         
         JoueurModele j1 = new Joueur("X", (Plateau) pm.getPlateau());
         JoueurModele j2 = new Joueur("O", (Plateau) pm.getPlateau());
@@ -52,8 +53,8 @@ public class Partie extends PartieControleur {
         pm.ajouterJoueur(j2);
         
         // controlleur de chaque joueur
-        games.ttc.controleur.Joueur jc1 = new games.ttc.controleur.Joueur(j1, p1);
-        games.ttc.controleur.Joueur jc2 = new games.ttc.controleur.Joueur(j2, p2);
+        games.ttc.controleur.Croix jc1 = new games.ttc.controleur.Croix(j1, p1);
+        games.ttc.controleur.Rond jc2 = new games.ttc.controleur.Rond(j2, p2);
         
         this.ajouterAction(jc1);
         this.ajouterAction(jc2);
