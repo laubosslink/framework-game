@@ -19,7 +19,6 @@ public class Plateau extends TexteVue {
         {
             for(int j=0; j<p.getPlateau()[i].length; j++)
             {
-                /** @todo eviter instanceof... */
                 if(p.getPlateau()[i][j] == null)
                     output += " ";
                 else if(p.getPlateau()[i][j] instanceof games.ttc.modele.Rond)
