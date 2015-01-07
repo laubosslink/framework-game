@@ -4,6 +4,7 @@ import Controleur.Action;
 import Controleur.PartieControleur;
 import Modele.PartieModele;
 import Vue.VueType;
+import games.huit_dragons.modele.Plateau;
 import games.huit_dragons.vue.SaisieJoueur;
 
 public class Partie extends PartieControleur{
@@ -35,8 +36,33 @@ public class Partie extends PartieControleur{
        }
     }
 
+    private boolean existeCarteAvecJeton(){
+        Plateau p = (Plateau) ((PartieModele) this.m).getPlateau();
+        
+        for(int i=0; i<p.getCartes().length; i++)
+        {
+            for(int j=0; j<p.getCartes()[i].length; j++)
+            {
+                if(p.getCartes()[i][j].jetonPresent())
+                    return true;
+            }
+        }
+        
+        return false;
+    }
+    
     @Override
     public boolean estFinit() {
+        Plateau p = (Plateau) ((PartieModele) this.m).getPlateau();
+        
+        if(existeCarteAvecJeton())
+            return false;
+        
+        if(p.getCartes().length == 4)
+        {
+        }
+        
+        
         return false;
     }
     

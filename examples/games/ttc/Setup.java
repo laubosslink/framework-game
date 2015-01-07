@@ -8,6 +8,7 @@ public class Setup {
     
     public static void main(String args[])
     {
+        
         Plateau plateau_modele = new Plateau();
         
         PartieModele partie_modele = new games.ttc.modele.Partie(plateau_modele);
