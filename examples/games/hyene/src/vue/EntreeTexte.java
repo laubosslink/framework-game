@@ -28,10 +28,6 @@ abstract public class EntreeTexte {
     return input;
   }
 
-
-  /**
-   * @return       String
-   */
   public String input(){
     return this.input("");
   }
