@@ -1,15 +1,19 @@
-import modele.*;
-import vue.*;
-import controleur.*;
+import modele.Plateau;
+import vue.PlateauVue;
+import controleur.Partie;
+
 
 public class Setup {
 
 	public static void main(String[] args) {
 		
-		modele.Plateau plateauModele = new modele.Plateau();
-		PartieModele partieModele = new Partie(plateauModele);
+		modele.Plateau plateau = new modele.Plateau();
 		
-		Partie p = new Partie(plateauModele);
+        PlateauVue pv = new PlateauVue("Plateau", plateau);
+		
+		Partie p = new Partie(new modele.Partie(plateau) , null);
+		
+		p.lancer();
 
 	}
 

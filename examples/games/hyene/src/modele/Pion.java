@@ -9,6 +9,14 @@ public abstract class Pion  extends MaterielModele{
 		_indice += f;
 	}
 	
+	public int getPosition(){
+		return _indice;
+	}
+	
+	public void setPosition(int p){
+		_indice = p;
+	}
+	
 	public void setState(String s){
 		state = s;
 	}

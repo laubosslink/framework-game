@@ -28,6 +28,6 @@ public abstract class PartieControleur extends ControleurTemplate{
 	
 	public abstract void lancer();
 
-	public abstract void estFinit();
+	public abstract boolean estFinit();
 	
 }

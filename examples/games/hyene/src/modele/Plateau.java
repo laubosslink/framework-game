@@ -2,12 +2,14 @@ package modele;
 
 import java.util.*;
 import java.awt.*;
+
 import modele.MaterielModele;
 import modele.PlateauModele;
 
-public class Plateau extends PlateauModele{
+public class Plateau extends PlateauModele implements Observer{
 	
 	protected MaterielModele[] plateau;
+	protected Pion[] pions;
 	
 	public Plateau(){
 		this.plateau = new MaterielModele[57];
@@ -16,6 +18,11 @@ public class Plateau extends PlateauModele{
 			this.plateau[i] = null;
 		
 		notifyObservers();		
+	}
+
+	public void update(Observable o, Object arg) {		
+		this.setChanged();
+		this.notifyObservers();
 	}
 
 }
