@@ -45,4 +45,9 @@ public class Rond extends Controleur.ControleurTemplate implements Action {
         
         return true;
     }
+
+    @Override
+    public boolean estPossible() {
+        return true;
+    }
 }
