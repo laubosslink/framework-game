@@ -19,7 +19,17 @@ public abstract class PartieControleur extends ControleurTemplate {
         this.l.add(a);
     }
     
-    public abstract void lancer();
+    public void lancer()
+    {
+        while(!estFinit())
+        {
+            for(Action a : this.l)
+            {
+                if(a.estValide())
+                    a.execute();
+            }
+        }
+    }
     
     public abstract boolean estFinit();
 }
