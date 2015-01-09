@@ -5,15 +5,17 @@
  */
 package games.hyene.modele;
 
-import games.hyene.modele.Pion;
+import Modele.MaterielModele;
 
 /**
  *
  * @author benseddik
  */
-class PionJoueur extends Pion {
+public abstract class PionJoueur extends Pion {
 
-    public PionJoueur() {
+    public PionJoueur() 
+    {
+        
     }
     
 }
