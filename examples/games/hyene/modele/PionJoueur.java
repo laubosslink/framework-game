@@ -11,7 +11,7 @@ import Modele.MaterielModele;
  *
  * @author benseddik
  */
-public abstract class PionJoueur extends Pion {
+public class PionJoueur extends Pion {
 
     public PionJoueur() 
     {
