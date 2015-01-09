@@ -1,10 +1,12 @@
 package games.hyene.controleur;
 
+
 import Controleur.Action;
 import Controleur.PartieControleur;
 import Modele.PartieModele;
 import Vue.VueType;
 import games.hyene.modele.Pion;
+import games.hyene.modele.PionJoueur;
 import games.hyene.vue.SaisieJoueur;
 
 
@@ -14,6 +16,7 @@ public class Partie extends PartieControleur{
         super(m, v);
     }
 
+    @Override
     public void lancer() {
     	
        SaisieJoueur s1 = new SaisieJoueur("Joueur 1");
