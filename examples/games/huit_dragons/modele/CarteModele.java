@@ -5,10 +5,12 @@ import Modele.MaterielModele;
 public abstract class CarteModele extends MaterielModele {
 
     private boolean visible;
+    private boolean jeton;
 
     public CarteModele() {
         super();
         this.visible = false;
+        this.jeton = false;
     }
     
     public void devientVisible(){
@@ -25,6 +27,18 @@ public abstract class CarteModele extends MaterielModele {
     
     public boolean estVisible(){
         return this.visible;
+    }
+    
+    public void metJeton(){
+        this.jeton = true;
+    }
+    
+    public void enleverJeton(){
+        this.jeton = false;
+    }
+    
+    public boolean jetonPresent(){
+        return this.jeton;
     }
             
 }
