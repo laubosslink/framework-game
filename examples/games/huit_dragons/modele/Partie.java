@@ -1,4 +1,3 @@
-
 package games.huit_dragons.modele;
 
 import Modele.PartieModele;

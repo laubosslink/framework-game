@@ -3,7 +3,9 @@ package games.hyene.vue;
 import Modele.PlateauModele;
 import Vue.TexteVue;
 import games.hyene.modele.Plateau;
-import java.util.Observable;
+import games.hyene.modele.Pion;
+import games.hyene.modele.PionJoueur;
+
 
 
 public class PlateauVue extends TexteVue{
@@ -14,17 +16,21 @@ public class PlateauVue extends TexteVue{
 	}
 	
 	public String toString(){
-		
+            
+		String output = "";
 		Plateau plateau = (Plateau)this.obj;
-		String aff = "";
-		for(int i=0 ; i<57 ; i++)
-			aff += "|_|";
-		return aff;
-	}
-
-	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
-		
+            
+		for(int i=0 ; i<plateau.getLength() ; i++){
+                    
+                    if(plateau.getPlateau()[i] == null)
+                        output += "|_|";
+                    
+                    else if(plateau.getPlateau()[i] instanceof games.hyene.modele.PionJoueur)
+                        if(plateau.getPions()[i].getPosition() == i)                         
+                            output += "|P" + i + "|";
+                }             
+                output += "\n";
+		return output;
 	}
 	
 }
