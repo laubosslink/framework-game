@@ -1,21 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package games.hyene.modele;
 
-import Modele.MaterielModele;
-
-/**
- *
- * @author benseddik
- */
 public class PionJoueur extends Pion {
-
-    public PionJoueur() 
-    {
-        
+    
+    private String _color;
+    private int _speed = 1;
+    private int _number;
+    private boolean estArrive = false;
+    
+    public PionJoueur(){
+        super();
     }
     
 }
